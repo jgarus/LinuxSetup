@@ -57,8 +57,8 @@ Useful when planning to keep games in a separate drive. This will also keep the 
 4. Enter the data displayed from *blkid* command
     * Make sure to seperate these using *tab* **ONCE** not spaces
     * `UUID=<your uuid>  <mount-point> <file-system-type>    <mount-option>  <dump>  <pass>`
-    * The following example has standard default `mount-option`, `dump`, and `pass`, so use these
-      * Example: `UUID=123-456-789-0123    /mnt/<name-of-your-drive>    defaults    0   2`
+    * The following example has standard default `file-system-type`, `mount-option`, `dump`, and `pass`, so use these
+      * Example: `UUID=123-456-789-0123    /mnt/<name-of-your-drive>    ext4    defaults    0   2`
 5. Exit nano
     * when done editing file hit *escape* then *ctrl+x*. Enter `y` when asked if you want to save, press enter again
 6. See if it works
