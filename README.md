@@ -69,3 +69,24 @@ Useful when planning to keep games in a separate drive. This will also keep the 
 This will allow Steam to download games to that newly mounted drive
 1. In terminal run `flatpak override --user --filesystem=/mnt/<your-fstab-mounted-drive> com.valvesoftware.Steam`
     * You will now be able to add this drive in your Steam Library Folders in *settings > downloads*
+
+### Keychron setup
+This will make the fn keys as second, meaning f keys will act as f keys and fn will provide the secondary function
+ * During usage of keyboard, make sure switch is set to *Win/Android*
+1. Create a config file if it does not exist by typing 
+  * `sudo nano /etc/modprobe.d/hid_apple.conf`
+
+2. Enter the following text
+  * `options hid_apple fnmode=2`
+
+3. Hit *Ctlr+x* to prompt saving, hit *y* when prompted and press *enter*
+
+4. Close all applications and enter the following command (Linux will reboot)
+  * On Debian based distros - `sudo update-initramfs -u && reboot`
+  * On Fedora - `sudo dracut --regenerate-all --force`
+
+5. Once rebooted, fn keys should be secondary - if it does not work, try the following
+  * Hold the following keys together until the keyboard stops flashing red: *fn+x+l*
+      * do this twice - test them
+        * First time makes fn keys as first (Apple-like)
+        * Second time makes fn keys second (Windows/Linux-like)
