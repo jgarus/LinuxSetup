@@ -90,3 +90,6 @@ This will make the fn keys as second, meaning f keys will act as f keys and fn w
       * do this twice - test them
         * First time makes fn keys as first (Apple-like)
         * Second time makes fn keys second (Windows/Linux-like)
+
+### Android Studio flatpak version terminal fix
+In terminal options, replace value in **Shell Path** with desired terminal `flatpak-spawn --host --env=TERM=xterm-256color zsh`
